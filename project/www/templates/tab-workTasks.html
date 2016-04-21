@@ -1,0 +1,10 @@
+<ion-view view-title="Work Tasks">
+  <ion-content>
+      <ion-list>
+      <ion-item ng-repeat="task2 in data2.tasks2">
+          <h3>{{ task2.title }}</h3>
+          <h6>{{ task2.added | date : 'yyyy-MM-dd HH:mm'}}</h6>
+          </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>
