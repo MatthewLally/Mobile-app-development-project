@@ -1,9 +1,25 @@
 <ion-view view-title="Personel Tasks">
   <ion-content>
-    <ion-list>
+    <ion-list ng-controller="PersonelTasksCtrl"
+              show-delete="shouldShowDelete"
+              show-reorder="shouldShowReorder"
+              can-swipe="listCanSwipe">
       <ion-item ng-repeat="task in data.tasks">
           <h3>{{ task.title}}</h3>
         <h6>{{ task.added | date: 'yyyy-MM-dd HH:mm' }}</h6>
+          <ion-option-button class = "button-positive"
+            ng-click="share(task)">
+          <!-- Share -->
+          </ion-option-button>
+          <ion-option-button class="button-info"
+            ng-click="edit(task)">
+          <!-- Edit -->
+          </ion-option-button>
+          <ion-delete-button class="ion-minus-circled"
+            ng-click="tasks.splice($index, 1)"></ion-delete-button>
+          <ion-reorder-button class="ion-navicon"
+                              on-reorder="reorderTask(task, $fromTask , $toIndex)">
+          </ion-reorder-button>
         </ion-item>
       </ion-list>
   </ion-content>
