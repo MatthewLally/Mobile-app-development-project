@@ -29,8 +29,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/workTasks',
     views: {
       'tab-workTasks': {
-        templateUrl: 'templates/tab-workTasks.html',
-        controller: 'WorkTasksCtrl'
+        templateUrl: 'templates/tab-workTasks.html', //sets the url
+        controller: 'WorkTasksCtrl' //sets the controller
       }
     }
   })
@@ -39,8 +39,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/personelTasks',
       views: {
         'tab-personelTasks': {
-          templateUrl: 'templates/tab-personelTasks.html',
-          controller: 'PersonelTasksCtrl'
+          templateUrl: 'templates/tab-personelTasks.html', //sets the url
+          controller: 'PersonelTasksCtrl' //sets the controller
         }
       }
     })
@@ -49,12 +49,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/addTask',
     views: {
       'tab-addTask': {
-        templateUrl: 'templates/tab-addTask.html',
-        controller: 'addTaskCtrl'
+        templateUrl: 'templates/tab-addTask.html', //sets the url
+        controller: 'addTaskCtrl' //sets the controller
       }
     }
   });
 
-  $urlRouterProvider.otherwise('/tab/addTask');
+  $urlRouterProvider.otherwise('/tab/addTask'); //If other tabs can not be found go to this one
 
 });

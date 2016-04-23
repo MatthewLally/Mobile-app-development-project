@@ -2,22 +2,24 @@
   <ion-content>
       <!--  Adapted from ://ionicframework.com/docs/api/directive/ionReorderButton-->
       <!-- http://ionicframework.com/docs/api/directive/ionDeleteButton/ -->
+      
+      <!--Sets the controllers as personel tasks ctrl -->
     <ion-list ng-controller="PersonelTasksCtrl"
               show-reorder = "true"
               show-delete = "shouldShowDelete">
-      <ion-item ng-repeat="task in data.tasks">
+      <ion-item ng-repeat="task in data.tasks"> <!--repeats the data in tasks -->
           <ion-delete-button class="ion-minus-circled"
-                             ng-click="removeTask($Index)">
+                             ng-click="removeTask($Index)"> <!--adds a button to remove tasks from the list -->
           </ion-delete-button>
-          <h3>{{ task.title}}</h3>
-        <h6>{{ task.added | date: 'yyyy-MM-dd HH:mm' }}</h6>
+          <h3>{{ task.title}}</h3> <!-- adds the task title -->
+        <h6>{{ task.added | date: 'yyyy-MM-dd HH:mm' }}</h6> <!--adds the date the task was added -->
           
           <ion-reorder-button class="ion-navicon"
-            on-reorder="moveTask(task , $fromIndex , $toIndex)">
+            on-reorder="moveTask(task , $fromIndex , $toIndex)"> <!--adds a reorder button to move the tasks around -->
           </ion-reorder-button>
         </ion-item>
       </ion-list>
-      <ion-toggle ng-model="shouldShowDelete">
+      <ion-toggle ng-model="shouldShowDelete"> <!--adds a toggle to show delete button -->
                   Show Delete button?
                 </ion-toggle>
   </ion-content>

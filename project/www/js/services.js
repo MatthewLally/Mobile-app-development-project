@@ -1,28 +1,28 @@
 angular.module('starter.services', [])
 
-.factory('Task', function() {
-    var data = {
+.factory('Task', function() { //sets up a factory called task
+    var data = { //creates a variable named data
         tasks: [
-            {title: "Buy Milk", added : new Date()}
+            {title: "Buy Milk", added : new Date()} //data to be added to tasks
             ,{title : "Feed Dog", added : new Date()}
         ]
     };
     
     function addTask(title){
-        data.tasks.push({title : title, added : new Date()});
+        data.tasks.push({title : title, added : new Date()}); //function for adding more tasks
     }
     
-    return {
+    return { //returns data 
         data : data
         , addTask : addTask
     }
 })
 
-.factory('Task2', function(){
-    var data2 = {
+.factory('Task2', function(){ //sets up the second factory
+    var data2 = { //creates second variable
         tasks2: [
-            {title : "Attend meeting", added : new Date()}
-            ,{title : "Complete project", added : new Date()}
+            {title : "Attend meeting", added : new Date()} //data to be added
+            ,{title : "Complete project", added : new Date()} 
         ]
     };
     
