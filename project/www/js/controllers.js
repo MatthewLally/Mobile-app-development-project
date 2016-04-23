@@ -7,6 +7,8 @@ angular.module('starter.controllers', [])
 .controller('PersonelTasksCtrl', function($scope , Task){
     $scope.data = Task.data;
 })
+
+
             
 .controller('addTaskCtrl', function($scope , Task , Task2){
     var data = {

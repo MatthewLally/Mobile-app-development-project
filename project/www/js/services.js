@@ -3,8 +3,8 @@ angular.module('starter.services', [])
 .factory('Task', function() {
     var data = {
         tasks: [
-            {title: "Go shopping", added : new Date()}
-            ,{title : "Meet John", added : new Date()}
+            {title: "Buy Milk", added : new Date()}
+            ,{title : "Feed Dog", added : new Date()}
         ]
     };
     
@@ -21,8 +21,8 @@ angular.module('starter.services', [])
 .factory('Task2', function(){
     var data2 = {
         tasks2: [
-            {title : "Attend Meeting", added : new Date()}
-            ,{title : "Complete Project", added : new Date()}
+            {title : "Attend meeting", added : new Date()}
+            ,{title : "Complete project", added : new Date()}
         ]
     };
     

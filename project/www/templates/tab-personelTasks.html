@@ -1,10 +1,32 @@
 <ion-view view-title="Personel Tasks">
   <ion-content>
-    <ion-list>
+      <!--  Adapted from ://ionicframework.com/docs/api/directive/ionReorderButton-->
+      <!-- http://ionicframework.com/docs/api/directive/ionDeleteButton/ -->
+    <ion-list ng-controller="PersonelTasksCtrl"
+              show-reorder = "true"
+              show-delete = "shouldShowDelete"
+              can-swipe = "listCanSwipe">
       <ion-item ng-repeat="task in data.tasks">
+          <ion-delete-button class="ion-minus-circled"
+                             ng-click="data.showDelete = !data.showDelete;
+                                       data.showReorder = false">
+          </ion-delete-button>
           <h3>{{ task.title}}</h3>
         <h6>{{ task.added | date: 'yyyy-MM-dd HH:mm' }}</h6>
+          
+          <ion-option-button class="button-positive" ng-click="share(task)">
+              Share
+          </ion-option-button>
+          
+          <ion-option-button class="button-info " ng-click="edit(item)">
+          </ion-option-button>
+          <ion-reorder-button class="ion-navicon"
+            on-reorder="movetask(task , $fromtask , $totask)">
+          </ion-reorder-button>
         </ion-item>
       </ion-list>
+      <ion-toggle ng-model="shouldShowDelete">
+                  Show Delete button?
+                </ion-toggle>
   </ion-content>
 </ion-view>
