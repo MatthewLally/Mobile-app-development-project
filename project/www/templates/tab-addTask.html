@@ -2,20 +2,20 @@
     <ion-nav-title>
     <span style="color:red">Add Task</span> <!--SETS THE HEADING AS RED -->
     </ion-nav-title>
-  <ion-content>
-      <div class = "list">
-      <label class = "item item-input item-stacked label">
-          <span class = "input-label">Personel Tasks to be entered here.</span> <!--CREATES A LABEL FOR TASKS TO BE ENTERED -->
-          <input type = "text" ng-model="data.newTask" placeholder="Enter a new task here">
-          </label>
+    <ion-content>
+    <div class = "list">
+    <label class = "item item-input item-stacked label">
+      <span class = "input-label">Personel Tasks to be entered here.</span> <!--CREATES A LABEL FOR TASKS TO BE ENTERED -->
+      <input type = "text" ng-model="data.newTask" placeholder="Enter a new task here">
+      </label>
           
-          <label class = "item item-input item-stacked label">
-          <span class = "input-label">Work Tasks to be entered here.</span>
-          <input type = "text" ng-model="data2.newTask2" placeholder="Enter a new task here">
-          </label>
+      <label class = "item item-input item-stacked label">
+      <span class = "input-label">Work Tasks to be entered here.</span>
+      <input type = "text" ng-model="data2.newTask2" placeholder="Enter a new task here">
+      </label>
       </div>
       <button class = "button icon-right ion-chevron-right button-dark" ng-click="addTask()"> <!--ADDS TASKS TO THE PERSONEL TASKS LIST -->
-          Add personel task
+        Add personel task
       </button>
       <button class = "button icon-right ion-chevron-right button-calm" ng-click="addTask2()"> <!-- ADDS TASKS TO THE WORK TASKS LSIT -->
           Add work task

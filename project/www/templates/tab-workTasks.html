@@ -6,16 +6,16 @@
                 show-reorder = "true"
                 show-delete = "shouldShowDelete">
       <ion-item ng-repeat="task2 in data2.tasks2">
-          <ion-delete-button class = "ion-minus-circled"
-                             ng-click="removeTask2($Index)">
-          </ion-delete-button>
-          <h3>{{ task2.title }}</h3> <!-- shows the added task -->
-          <h6>{{ task2.added | date : 'yyyy-MM-dd HH:mm'}}</h6> <!--shows the time the task was added -->
+      <ion-delete-button class = "ion-minus-circled"
+        ng-click="removeTask2($Index)">
+      </ion-delete-button>
+      <h3>{{ task2.title }}</h3> <!-- shows the added task -->
+      <h6>{{ task2.added | date : 'yyyy-MM-dd HH:mm'}}</h6> <!--shows the time the task was added -->
           
-          <ion-reorder-button class="ion-navicon"
-            on-reorder="moveTask2(task2 , $fromIndex , $toIndex)"> <!-- adds a reorder button to move the tasks around -->                                                   
-          </ion-reorder-button>
-          </ion-item>
+      <ion-reorder-button class="ion-navicon"
+        on-reorder="moveTask2(task2 , $fromIndex , $toIndex)"> <!-- adds a reorder button to move the tasks around -->                                                   
+      </ion-reorder-button>
+      </ion-item>
       </ion-list>
       <ion-toggle ng-model="shouldShowDelete"> <!-- adds a toggle to show the delete button -->
       Show Delete Button?
