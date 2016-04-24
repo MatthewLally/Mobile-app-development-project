@@ -1,0 +1,5 @@
+Project Plan :
+1.Create a to do list with three different tabs , one to add tasks , one to display work tasks and one to to display personel tasks
+2.In the add tasks, have a button you tab to add tasks to your chosen list
+3. In the tasks lists , have the tasks displayed and the time added
+4. Have a toggle to be able to delete tasks and reorder them.
